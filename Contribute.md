@@ -15,8 +15,20 @@ On Ubuntu run the following command
 Download .deb package file
     sudo dpkg -i <file>.deb
     sudo apt-get install -f # Install dependencies
+Install Swagger Viewer Extenstion
+    Swagger Viewer 1.7.0
+Install OpenAPI linter
+    openapi-lint 0.3.0
 
 # Install typescript
     sudo npm install -g typescript
 
 # Development guidelines
+
+## Documentation
+    * README.md file is used for high level project log commentary (also called the captain's log)
+    * Contribute.md file has all the project related configurations to get this project operational
+
+## Change Management
+    * All the code development is in the "development" branch. No feature branches at this point to keep things simple. Unless I want to try out a parallel approach
+    * Stable code will be moved to the "master" branch through pull request     
