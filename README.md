@@ -13,3 +13,15 @@ up a portfolio of tracked stocks that someone can pull down for review.
 # API style guide
 http://apistylebook.com
 
+# API lifecycle
+Given that APIs have become the backbone of industry wide integrations, there is need to streamline the overall API development process. this part of the readme file captures the notes of the experience that I go through as I get deeper into this domain. 
+
+## Lifecycle
+
+## Discover and Design
+This phase is when we explore the project, business capability or problem domain to outline the APIs that we might need. As we go through this discovery phase, we use the OpenAPI 3.0 yaml file to capture the API definition. On these lines, swagger editor is a good place to start. Being a single developer, I cloned the repository for swagger-editor (https://github.com/swagger-api/swagger-editor.git) and built it to run it locally.   
+
+### References
+* http://swagger.io 
+* https://swagger.io/specification
+* http://apievangelist.com
