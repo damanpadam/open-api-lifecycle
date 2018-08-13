@@ -1,5 +1,59 @@
 openapi: 3.0.0
 info:
-  title: "API"
-  version: "1.0.0"
-paths: {}
+  title: Stocks Portfolio Tracker API
+  description: >-
+    API to keep track of a set of stocks as a portfolio to make buy/sell
+    decisions
+  version: 0.0.1
+  termsOfService: http://mydomain.com/docs/open-for-all.html
+  contact:
+    name: Damanjit S Padam
+    email: damanpadam@gmail.com
+    url: http://mydomain.com
+  license:
+    name: MIT
+servers:
+  - url: http://dev.stock-portfolio.mydomain.com/v1
+    description: Dev Server
+    
+  - url: http://stock-portfolio.mydomain.com/v1
+    description: Prod Server
+  
+paths:
+  /stocks:
+    get:
+     description: Obtain information about a stock from our portfolio database
+     parameters: 
+      - name: bodyLimit
+        in: query
+        description: Limit on the number of stocks to return
+        schema:
+         minimum: 10
+         maximum: 20
+         example: 15
+      - name: pageLimit
+        in: query
+        description: Limit on the number of stock pages to return
+        schema:
+         minimum: 1
+         maximum: 5
+         example: 2   
+     responses:
+      200:
+        description: Successful pull of stocks
+        content:
+          application/json:
+            schema:
+              type: array
+              items: 
+                properties:
+                  ticker:
+                    type: string
+                    example: AMZN
+                  company name:
+                    type: string
+                    example: Amazon
+              
+    
+    
+      
